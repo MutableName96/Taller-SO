@@ -62,7 +62,7 @@ MiB Intercambio:   4096,0 total,   4096,0 libre,      0,0 usado.  11368,8 dispon
 Y pues como todos unos Ing en sistemas identificamos procesos para matar a ojo, y clasificandolos separando los de procesos del sistema identificamos estos procesos y tambien el de vsCode porque esto se esta haciendo en VsCode seria pegarse un tiro en el pie matar el proceso.
 Con los procesos identificados pues los matamos con el comando `kill`
 
-
+Aqui tenemos por ejemplo el de spotify mi navegador edge y la app de whattsap o el editor de texto pero mataremos algunos porque si estoy usando algunos de estos
 ```bash
     PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU  %MEM     HORA+ ORDEN 
    6326 mutable+  20   0  852272  54652  43188 S   7,9   0,3   0:01.57 gnome-terminal-text                                                                                               
@@ -184,3 +184,76 @@ MiB Intercambio:   4096,0 total,   4096,0 libre,      0,0 usado.  11409,1 dispon
      26 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker/1:0H-events_highpri                                                                                       
      27 root      20   0       0      0      0 S   0,0   0,0   0:00.00 cpuhp/2  
 ```
+
+asi que matamos ahora a todo lo que se nos atravieze como por ejemplo nuestro navegador que era msedge
+
+```bash
+mutablename96@mutablename96-Nitro-AN515-54:~$ kill 3581 6549 3631 
+mutablename96@mutablename96-Nitro-AN515-54:~$ top
+
+top - 13:36:49 up 38 min,  1 user,  load average: 0,66, 1,05, 1,14
+Tareas: 329 total,   1 ejecutar,  328 hibernar,    0 detener,    0 zombie
+%Cpu(s):  3,1 us,  0,8 sy,  0,0 ni, 95,9 id,  0,1 wa,  0,0 hi,  0,1 si,  0,0 st 
+MiB Mem :  15832,5 total,   9651,8 libre,   2779,8 usado,   4157,5 búf/caché     
+MiB Intercambio:   4096,0 total,   4096,0 libre,      0,0 usado.  13052,7 dispon Mem 
+
+    PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU  %MEM     HORA+ ORDEN                                                                                                             
+    911 avahi     20   0   14848   9856   3840 S  18,8   0,1   8:27.41 avahi-daemon                                                                                                      
+   6326 mutable+  20   0  856392  58492  43188 S  11,2   0,4   0:28.12 gnome-terminal-                                                                                                   
+   2229 mutable+  20   0   25,0g 184124 118696 S   7,3   1,1   2:02.94 Xorg                                                                                                              
+   2497 mutable+  20   0 4697552 332000 135824 S   6,3   2,0   2:24.08 gnome-shell                                                                                                       
+    628 root     -51   0       0      0      0 S   1,3   0,0   0:40.72 irq/146-iwlwifi                                                                                                   
+   7765 mutable+  20   0   23424   6016   3840 R   1,3   0,0   0:00.09 top                                                                                                               
+    275 root     -51   0       0      0      0 S   1,0   0,0   0:21.52 irq/136-SYNA7DB5:01                                                                                               
+    967 root      20   0  345804  19184  16496 S   1,0   0,1   0:36.40 NetworkManager                                                                                                    
+     24 root      20   0       0      0      0 S   0,3   0,0   0:05.10 ksoftirqd/1                                                                                                       
+   2697 mutable+  20   0  397844  11924   7040 S   0,3   0,1   0:09.97 ibus-daemon                                                                                                       
+   3745 root      20   0       0      0      0 I   0,3   0,0   0:06.72 kworker/1:2-mm_percpu_wq                                                                                          
+   5142 root       0 -20       0      0      0 I   0,3   0,0   0:01.57 kworker/u25:1-rb_allocator                                                                                        
+   5486 mutable+  20   0 1226684 114960  97076 S   0,3   0,7   0:01.32 spotify                                                                                                           
+   7339 root      20   0       0      0      0 I   0,3   0,0   0:00.06 kworker/11:2-events                                                                                               
+      1 root      20   0   23620  13720   8984 S   0,0   0,1   0:03.02 systemd                                                                                                           
+      2 root      20   0       0      0      0 S   0,0   0,0   0:00.00 kthreadd                                                                                                          
+      3 root      20   0       0      0      0 S   0,0   0,0   0:00.00 pool_workqueue_release                                                                                            
+      4 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker/R-rcu_g                                                                                                   
+      5 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker/R-rcu_p                                                                                                   
+      6 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker/R-slub_                                                                                                   
+      7 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker/R-netns                                                                                                   
+      9 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker/0:0H-events_highpri                                                                                       
+     12 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker/R-mm_pe                                                                                                   
+     13 root      20   0       0      0      0 I   0,0   0,0   0:00.00 rcu_tasks_kthread                                                                                                 
+     14 root      20   0       0      0      0 I   0,0   0,0   0:00.00 rcu_tasks_rude_kthread                                                                                            
+     15 root      20   0       0      0      0 I   0,0   0,0   0:00.00 rcu_tasks_trace_kthread                                                                                           
+     16 root      20   0       0      0      0 S   0,0   0,0   0:00.06 ksoftirqd/0                                                                                                       
+     17 root      20   0       0      0      0 I   0,0   0,0   0:03.99 rcu_preempt                                                                                                       
+     18 root      rt   0       0      0      0 S   0,0   0,0   0:00.01 migration/0                                                                                                       
+     19 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 idle_inject/0                                                                                                     
+     20 root      20   0       0      0      0 S   0,0   0,0   0:00.00 cpuhp/0                                                                                                           
+     21 root      20   0       0      0      0 S   0,0   0,0   0:00.00 cpuhp/1                                                                                                           
+     22 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 idle_inject/1                                                                                                     
+     23 root      rt   0       0      0      0 S   0,0   0,0   0:00.13 migration/1                                                                                                       
+     25 root      20   0       0      0      0 I   0,0   0,0   0:00.00 kworker/1:0-inet_frag_wq                                                                                          
+     26 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker/1:0H-events_highpri                                                                                       
+     27 root      20   0       0      0      0 S   0,0   0,0   0:00.00 cpuhp/2                                                                                                           
+     28 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 idle_inject/2                                                                                                     
+mutablename96@mutablename96-Nitro-AN515-54:~$ 
+
+```
+Y ahora para acabar matemos a spotify lo identificacmos como el proceso
+```bash
+8178 mutable+  20   0 1156,7g 143992 106980 S   2,6   0,9   0:00.82 spotify 
+7985 mutable+  20   0 3619032 222084 177608 S   2,0   1,4   0:01.88 spotify      
+8106 mutable+  20   0 1272056 121844  85500 S   0,7   0,8   0:00.60 spotify                                                                                                           
+                                                                                                          
+```
+Y los matamos 
+```bash
+mutablename96@mutablename96-Nitro-AN515-54:~$ kill 8178 7985 8106
+// si lo volvemos a ejecutar vemos que ya esta muerto
+mutablename96@mutablename96-Nitro-AN515-54:~$ kill 8178 7985 8106
+bash: kill: (8178) - No existe el proceso
+bash: kill: (8106) - No existe el proceso
+mutablename96@mutablename96-Nitro-AN515-54:~$ 
+
+```
+Y listo asi se mata un proceso en linux para evitar tener zombies entre nosotros 🧟🧟🧟
