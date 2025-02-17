@@ -51,7 +51,7 @@ Leyendo la información de estado... Hecho
 Se pueden actualizar 192 paquetes. Ejecute «apt list --upgradable» para verlos.
 
 ```
-por si acaso no funciono la anterior, otra vez
+Por si acaso no funciono la anterior, otra vez lo hacemos
 
 ```bash
 mutablename96@mutablename96-Nitro-AN515-54:~$  sudo apt update -y
@@ -67,7 +67,7 @@ Leyendo la información de estado... Hecho
 Se pueden actualizar 192 paquetes. Ejecute «apt list --upgradable» para verlos.
 ```
 
-2. Con esto listo ahora instalamos el servidor web apache y verificamos su status
+2. Con esto listo ahora instalamos el servidor web apache y verificamos su status activo
 
 Primero instalamos con `sudo apt install apache2 -y`
 ```bash
@@ -220,4 +220,4 @@ con esto sabemos que es `10.31.7.103` y solamente nos conectamos y listo
 
 <img style="width:100%;height:1000px; display: block;margin:0 auto;" src="exito.png"  alt="exito"></img> 
 
-Y ya acabamos .:D
+Y ya acabamos :D
